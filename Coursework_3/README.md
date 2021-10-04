@@ -1,4 +1,4 @@
-project_name
+Coursework 21-22
 ==============================
 
 Geoanalytics 101
