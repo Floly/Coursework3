@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 import geopandas as gpd
 import pandas as pd
 import numpy as np
@@ -17,9 +11,6 @@ from shapely.geometry import Polygon
 import seaborn as sns
 
 from typing import List, Union, Tuple
-
-
-# In[14]:
 
 
 def visualize_hexagons(hexagons: 'polygons', color="blue", folium_map=None) -> 'map visualization':
@@ -45,6 +36,7 @@ def visualize_hexagons(hexagons: 'polygons', color="blue", folium_map=None) -> '
         m.add_child(my_PolyLine)
     return m
 
+
 def visualize_polygons(geometry) -> 'map visualization':
     
     lats, lons = get_lat_lon(geometry)
@@ -56,7 +48,7 @@ def visualize_polygons(geometry) -> 'map visualization':
     
     return m
 
-# выводим центроиды полигонов
+
 def get_lat_lon(geometry) -> list:
     '''
     Выводит центры полигонов (широта, долгота).
@@ -77,9 +69,6 @@ def osm_query(tag: list, city: str) -> 'gdf':
     gdf['type'] = np.full(len(gdf), tag[list(tag.keys())[0]])
     gdf = gdf[['city', 'object', 'type', 'geometry']]
     return gdf
-
-
-# In[12]:
 
 
 def create_hexagons(geoJson):
@@ -117,7 +106,6 @@ def create_hexagons(geoJson):
     polygons_hex = pd.Series(polylines_x).apply(lambda x: Polygon(x))
         
     return m, polygons_hex, polylines
-# polygon_hex , polylines - геометрии гексагонов в разных форматах
 
 
 def create_choropleth(data, json, columns, legend_name, feature, bins):
@@ -144,16 +132,3 @@ def create_choropleth(data, json, columns, legend_name, feature, bins):
     folium.LayerControl().add_to(m)
 
     return m
-
-
-# In[13]:
-
-
-osm_query
-
-
-# In[ ]:
-
-
-
-
