@@ -11,3 +11,6 @@ https://drive.google.com/drive/folders/1J7iGIJCQyvMJzGwrNxTs5m_xhzYS5MzE
 [Источник](https://data.humdata.org/dataset/kontur-population-dataset)
 https://drive.google.com/file/d/1_ezzxHEwrc7wVn0ND6e4lbsiDhQVAYAd/view?usp=sharing
 
+Ссылка на датасет с российскими милионниками (14 городов)
+https://drive.google.com/drive/folders/1d0te-176PaAbapRdz4l6rj2If9XnCQrJ
+
