@@ -195,6 +195,7 @@ def concat_cities_objects(path):
 
 def count_objects(objects_df: 'DataFrame'):
     """
+    From dataframe of objects joined to hexagons creates dataframe of unique hexagons 
     :param objects_df: dataframe of objects assigned to polygons
     :return: dataframe of polygons with columns: hex_id, city, geometry,
     counter_dict - dictionary of object-type counter
